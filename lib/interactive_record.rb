@@ -57,8 +57,7 @@ class InteractiveRecord
     value_name = attribute.values[0]
 
     sql = <<-SQL
-      SELECT * FROM #{table_name}
-      WHERE #{column_name} = ?
+      SELECT * FROM #{table_name} WHERE #{column_name} = ?
       SQL
 
     DB[:conn].execute(sql, value_name);
